@@ -1,0 +1,9 @@
+#!/bin/bash
+rm -rf tmp
+mkdir tmp
+find Images/ -type f |xargs cp -t tmp/
+cd tmp/
+../bin/7z.exe a images.7z *
+mv images.7z ..
+cd ..
+rm -rf tmp
